@@ -1,19 +1,51 @@
-title: "JJ Ortiz | Power BI Developer"
-description: "Enterprise Analytics & Business Intelligence Solutions"
+title: "JJ Ortiz"
+description: "Power BI Consultant | Enterprise Analytics & Business Intelligence"
 
+# IMPORTANT for project site
+baseurl: "/Enterprise-Retail-PowerBI"
+url: "https://jjortiz-bi.github.io"
+
+# Theme
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
 
+# Plugins
 plugins:
   - jekyll-include-cache
 
 markdown: kramdown
 
-# Required for project sites (VERY IMPORTANT)
-baseurl: "/Enterprise-Retail-PowerBI"
-
+# Navigation
 nav:
   - title: "Home"
     url: /
   - title: "Retail Case Study"
     url: /retail/
+
+# Footer (Professional Version)
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/your-linkedin"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/jjortiz-bi"
+
+# Hide Atom Feed
+atom_feed:
+  hide: true
+
+# Disable theme credit display
+show_date: false
+search: false
+
+# Author Profile (optional but recommended)
+author:
+  name: "JJ Ortiz"
+  bio: "Senior Power BI Developer specializing in enterprise-grade analytics systems."
+  location: "Philippines"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:your@email.com"
