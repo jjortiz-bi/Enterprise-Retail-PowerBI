@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Power BI Consultant"
+title: "JJ Ortiz | Power BI Consultant"
 header:
   overlay_color: "#111827"
   overlay_filter: 0.5
