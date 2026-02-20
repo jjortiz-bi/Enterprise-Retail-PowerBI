@@ -1,5 +1,6 @@
-title: "JJ Ortiz | Power BI Consultant"
-description: "Enterprise Analytics & Business Intelligence"
+title: "JJ Ortiz | Power BI Developer"
+description: "Enterprise Analytics & Business Intelligence Solutions"
+
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
 
@@ -7,3 +8,12 @@ plugins:
   - jekyll-include-cache
 
 markdown: kramdown
+
+# Required for project sites (VERY IMPORTANT)
+baseurl: "/Enterprise-Retail-PowerBI"
+
+nav:
+  - title: "Home"
+    url: /
+  - title: "Retail Case Study"
+    url: /retail/
