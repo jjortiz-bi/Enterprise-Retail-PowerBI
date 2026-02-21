@@ -17,9 +17,8 @@ body {
 header {
     position: sticky;
     top: 0;
-    background: #FFFFFF;
+    background: #1E3A8A;
     padding: 25px 0;
-    border-bottom: 1px solid #E5E7EB;
     z-index: 1000;
 }
 
@@ -32,6 +31,7 @@ header {
 /* Bigger Logo */
 .logo-img {
     height: 140px;
+    filter: brightness(0) invert(1);
 }
 
 /* Navigation Buttons */
@@ -41,7 +41,7 @@ nav a {
 }
 
 .nav-btn {
-    color: #374151;
+    color: #E5E7EB;
     font-weight: 600;
     padding: 8px 18px;
     border-radius: 8px;
@@ -49,8 +49,8 @@ nav a {
 }
 
 .nav-btn:hover {
-    background-color: #1E3A8A;
-    color: white;
+    background-color: white;
+    color: #1E3A8A;
 }
 
 /* Hero */
