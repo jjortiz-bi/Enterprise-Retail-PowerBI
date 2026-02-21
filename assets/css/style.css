@@ -1,4 +1,4 @@
-/* Base */
+/* ================= BASE ================= */
 
 body {
     margin: 0;
@@ -12,7 +12,11 @@ body {
     margin: auto;
 }
 
-/* Header */
+section {
+    border-bottom: 1px solid #E5E7EB;
+}
+
+/* ================= HEADER ================= */
 
 header {
     position: sticky;
@@ -34,7 +38,8 @@ header {
     filter: brightness(0) invert(1);
 }
 
-/* Navigation Buttons */
+/* Navigation */
+
 nav a {
     text-decoration: none;
     margin-left: 25px;
@@ -53,11 +58,12 @@ nav a {
     color: #1E3A8A;
 }
 
-/* Hero */
+/* ================= HERO ================= */
 
 .hero {
     padding: 120px 0;
     text-align: center;
+    background: #FFFFFF;
 }
 
 .hero h2 {
@@ -75,7 +81,7 @@ nav a {
     color: #6B7280;
 }
 
-/* Buttons */
+/* ================= BUTTONS ================= */
 
 .cta-buttons {
     margin-top: 40px;
@@ -118,19 +124,23 @@ nav a {
     transform: translateY(-3px);
 }
 
-/* Sections */
+/* ================= PROJECTS ================= */
 
-.projects,
-.services {
+.projects {
     padding: 120px 0;
+    background: #F5F7FA;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1E3A8A;
 }
 
 .section-subtitle {
     color: #6B7280;
     margin-bottom: 50px;
 }
-
-/* Project Grid */
 
 .project-grid {
     display: grid;
@@ -139,7 +149,7 @@ nav a {
 }
 
 .project-card {
-    background: #F9FAFB;
+    background: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
     transition: 0.3s ease;
@@ -160,7 +170,12 @@ nav a {
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-/* Service Cards */
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 120px 0;
+    background: #FFFFFF;
+}
 
 .cards {
     display: flex;
@@ -183,7 +198,7 @@ nav a {
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 
 footer {
     padding: 40px 0;
