@@ -69,7 +69,8 @@ header.scrolled .logo-img {
 .desktop-nav a {
     color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700; /* Stronger bold */
+    letter-spacing: 0.5px;
     position: relative;
     transition: all 0.3s ease;
 }
