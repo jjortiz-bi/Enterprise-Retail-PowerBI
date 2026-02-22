@@ -121,37 +121,48 @@ header.scrolled .logo-img {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ================= MOBILE MENU ================= */
+/* ================= MOBILE MENU (Premium Smooth Slide) ================= */
 
 .mobile-menu {
-    display: none;
+    display: flex; /* Must stay flex for animation */
     flex-direction: column;
     background: rgba(23, 37, 84, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     text-align: center;
-    animation: fadeIn 0.3s ease;
+
+    max-height: 0;              /* Collapsed state */
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
 }
 
+/* Links */
 .mobile-menu a {
     padding: 18px;
     color: white;
     text-decoration: none;
     border-top: 1px solid rgba(255,255,255,0.08);
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+
+    transform: translateY(-8px);
+    opacity: 0;
 }
 
 .mobile-menu a:hover {
     background: rgba(255,255,255,0.06);
 }
 
+/* Active State */
 .mobile-menu.active {
-    display: flex;
+    max-height: 400px;   /* Enough to show items */
+    opacity: 1;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Animate links in */
+.mobile-menu.active a {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* ================= HERO ================= */
