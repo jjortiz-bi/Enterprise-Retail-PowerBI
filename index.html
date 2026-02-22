@@ -14,14 +14,12 @@
 
         <img src="assets/images/logo.png" alt="Logo" class="logo-img">
 
-        <!-- Desktop Nav -->
         <nav class="desktop-nav">
             <a href="#projects">Projects</a>
             <a href="#services">Services</a>
             <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank">LinkedIn</a>
         </nav>
 
-        <!-- Hamburger -->
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -30,7 +28,6 @@
 
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#projects">Projects</a>
         <a href="#services">Services</a>
@@ -38,14 +35,108 @@
     </div>
 </header>
 
-<!-- Your sections remain unchanged -->
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-content">
+        <h2>Transforming Data Into Executive-Level Decision Systems</h2>
+        <p>
+            I design scalable Power BI architectures that convert raw operational data
+            into executive-level decision systems.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank" class="btn btn-primary">
+                Connect on LinkedIn
+            </a>
+
+            <a href="mailto:jerome.ortiz0029@gmail.com?subject=Business%20Inquiry%20-%20Power%20BI%20Consulting"
+               class="btn btn-secondary">
+                Email Me
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h3>Capstone Project: Retail Intelligence System</h3>
+        <p class="section-subtitle">
+            End-to-end BI transformation project including executive reporting,
+            store-level analytics, promotion optimization, and inventory intelligence.
+        </p>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="assets/images/01_Executive_Overview.png" alt="">
+                <div class="project-content">
+                    <h4>Executive Overview Dashboard</h4>
+                    <p>C-level KPI tracking including Net Sales, Profit Margin, YoY Growth, and Inventory Turnover.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/02_Store_Insights.png" alt="">
+                <div class="project-content">
+                    <h4>Store Performance Insights</h4>
+                    <p>Granular store-level analytics with regional comparisons.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/03_Promotion_Optimization.png" alt="">
+                <div class="project-content">
+                    <h4>Promotion Optimization</h4>
+                    <p>Discount ROI analysis and promotion lift tracking.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/04_Inventory_Performance.png" alt="">
+                <div class="project-content">
+                    <h4>Inventory Performance</h4>
+                    <p>Inventory turnover and stock coverage tracking.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+    <div class="container">
+        <h3>Consulting Services</h3>
+
+        <div class="cards">
+            <div class="card">
+                <h4>Executive Dashboard Development</h4>
+                <p>Designing high-level KPI dashboards for executive teams.</p>
+            </div>
+
+            <div class="card">
+                <h4>Data Modeling & Architecture</h4>
+                <p>Building scalable star-schema models optimized for performance.</p>
+            </div>
+
+            <div class="card">
+                <h4>Power BI Optimization</h4>
+                <p>Improving report speed, DAX efficiency, and UX.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 JJ Ortiz | Business Intelligence Consulting</p>
+    </div>
+</footer>
 
 <script>
 const header = document.getElementById("header");
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
-// Scroll Effect
 window.addEventListener("scroll", () => {
     if (window.scrollY > 60) {
         header.classList.add("scrolled");
@@ -54,7 +145,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Hamburger Toggle
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     mobileMenu.classList.toggle("active");
