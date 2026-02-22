@@ -11,7 +11,6 @@
 
 <header id="header">
     <div class="container nav-container">
-
         <img src="assets/images/logo.png" alt="Logo" class="logo-img">
 
         <nav class="desktop-nav">
@@ -25,7 +24,6 @@
             <span></span>
             <span></span>
         </div>
-
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
@@ -33,26 +31,71 @@
         <a href="#services">Services</a>
         <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank">LinkedIn</a>
     </div>
+
+    <!-- Text Animation -->
+    <div class="header-text">
+        <p class="dynamic-text">Business Consulting</p>
+    </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
     <div class="container hero-content">
         <h2>Transforming Data Into Executive-Level Decision Systems</h2>
-        <p>
-            I design scalable Power BI architectures that convert raw operational data
-            into executive-level decision systems.
-        </p>
+        <p class="hero-subtitle">I design scalable Power BI architectures that convert raw operational data into executive-level decision systems.</p>
 
         <div class="cta-buttons">
             <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank" class="btn btn-primary">
                 Connect on LinkedIn
             </a>
 
-            <a href="mailto:jerome.ortiz0029@gmail.com?subject=Business%20Inquiry%20-%20Power%20BI%20Consulting"
-               class="btn btn-secondary">
+            <a href="mailto:jerome.ortiz0029@gmail.com?subject=Business%20Inquiry%20-%20Power%20BI%20Consulting" class="btn btn-secondary">
                 Email Me
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <div class="container about-container">
+        <div class="about-image">
+            <img src="assets/images/Ortiz, Jerome M. (17).JPG" alt="Jerome Ortiz">
+        </div>
+
+        <div class="about-content">
+            <h2>About Me</h2>
+
+            <p class="about-intro">
+                I am a Senior Power BI Developer specializing in enterprise-grade business intelligence solutions 
+                that transform complex operational data into executive-level decision systems.
+            </p>
+
+            <p>
+                With a background in BI architecture, I work closely with business leaders and operational teams to create
+                high-performance dashboards, automate reporting processes, and build scalable data models.
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill-box">Power BI Architecture</div>
+                <div class="skill-box">Star Schema Modeling</div>
+                <div class="skill-box">Advanced DAX Development</div>
+                <div class="skill-box">Executive Dashboard Design</div>
+                <div class="skill-box">Performance Optimization</div>
+                <div class="skill-box">KPI Framework Design</div>
+                <div class="skill-box">Data Validation & Governance</div>
+                <div class="skill-box">Automation & Reporting Pipelines</div>
+            </div>
+
+            <div class="impact">
+                <h4>Impact Delivered</h4>
+                <ul>
+                    <li>Reduced manual reporting efforts through dashboard automation</li>
+                    <li>Improved executive decision-making through standardized KPI frameworks</li>
+                    <li>Enhanced report performance via model optimization and DAX tuning</li>
+                    <li>Enabled real-time revenue, margin, and operational visibility</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
@@ -138,7 +181,7 @@ const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
-// Scroll glass effect
+// Scroll effect
 window.addEventListener("scroll", () => {
     if (window.scrollY > 60) {
         header.classList.add("scrolled");
@@ -153,14 +196,11 @@ hamburger.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
 });
 
-// 🔥 CLOSE MENU ON MOBILE LINK CLICK
+// Close menu on mobile link click
 mobileLinks.forEach(link => {
     link.addEventListener("click", function () {
-
-        // Close menu
         hamburger.classList.remove("open");
         mobileMenu.classList.remove("active");
-
     });
 });
 </script>
