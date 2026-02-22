@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Senior Power BI Consultant helping organizations build scalable executive reporting systems.">
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,27 +16,11 @@
 <header>
     <div class="container nav-container">
         <img src="assets/images/logo.png" alt="Logo" class="logo-img">
-
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank">LinkedIn</a>
+        <nav>
+            <a href="#projects" class="nav-btn">Projects</a>
+            <a href="#services" class="nav-btn">Services</a>
+            <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank" class="nav-btn">LinkedIn</a>
         </nav>
-
-        <!-- Hamburger (Mobile Only) -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#projects">Projects</a>
-        <a href="#services">Services</a>
-        <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank">LinkedIn</a>
     </div>
 </header>
 
@@ -46,17 +33,21 @@
         </p>
 
         <div class="cta-buttons">
-            <a href="https://www.linkedin.com/in/engr-jj-ortiz" target="_blank" class="btn btn-primary">
-                Connect on LinkedIn
+            <a href="https://www.linkedin.com/in/engr-jj-ortiz" 
+               target="_blank" 
+               class="btn btn-primary">
+                <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
             </a>
 
-            <a href="mailto:jerome.ortiz0029@gmail.com?subject=Business%20Inquiry%20-%20Power%20BI%20Consulting"
+            <a href="mailto:jerome.ortiz0029@gmail.com?subject=Business%20Inquiry%20-%20Power%20BI%20Consulting" 
                class="btn btn-secondary">
-                Email Me
+                <i class="fa-solid fa-envelope"></i> Email Me
             </a>
         </div>
     </div>
 </section>
+
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects" class="projects">
     <div class="container">
@@ -67,8 +58,9 @@
         </p>
 
         <div class="project-grid">
+
             <div class="project-card">
-                <img src="assets/images/01_Executive_Overview.png" alt="">
+                <img src="assets/images/01_Executive_Overview.png" alt="Executive Overview">
                 <div class="project-content">
                     <h4>Executive Overview Dashboard</h4>
                     <p>C-level KPI tracking including Net Sales, Profit Margin, YoY Growth, and Inventory Turnover.</p>
@@ -76,31 +68,34 @@
             </div>
 
             <div class="project-card">
-                <img src="assets/images/02_Store_Insights.png" alt="">
+                <img src="assets/images/02_Store_Insights.png" alt="Store Insights">
                 <div class="project-content">
                     <h4>Store Performance Insights</h4>
-                    <p>Granular store-level analytics with regional comparisons.</p>
+                    <p>Granular store-level performance analytics with regional comparisons and profit breakdown.</p>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/images/03_Promotion_Optimization.png" alt="">
+                <img src="assets/images/03_Promotion_Optimization.png" alt="Promotion Optimization">
                 <div class="project-content">
                     <h4>Promotion Optimization</h4>
-                    <p>Discount ROI analysis and promotion lift tracking.</p>
+                    <p>Discount ROI analysis, promotion lift tracking, and margin impact measurement.</p>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/images/04_Inventory_Performance.png" alt="">
+                <img src="assets/images/04_Inventory_Performance.png" alt="Inventory Performance">
                 <div class="project-content">
                     <h4>Inventory Performance</h4>
-                    <p>Inventory turnover and stock coverage tracking.</p>
+                    <p>Inventory turnover analysis, stock coverage tracking, and category-level movement insights.</p>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
+
+<!-- ================= SERVICES ================= -->
 
 <section id="services" class="services">
     <div class="container">
@@ -109,7 +104,7 @@
         <div class="cards">
             <div class="card">
                 <h4>Executive Dashboard Development</h4>
-                <p>Designing high-level KPI dashboards for executive teams.</p>
+                <p>Designing high-level KPI dashboards for executive leadership teams.</p>
             </div>
 
             <div class="card">
@@ -119,7 +114,7 @@
 
             <div class="card">
                 <h4>Power BI Optimization</h4>
-                <p>Improving report speed, DAX efficiency, and UX.</p>
+                <p>Improving report speed, DAX efficiency, and user experience.</p>
             </div>
         </div>
     </div>
@@ -127,19 +122,9 @@
 
 <footer>
     <div class="container">
-        <p>© 2026 JJ Ortiz | Business Intelligence Consulting</p>
+        <p>© 2025 Business Intelligence Consulting</p>
     </div>
 </footer>
-
-<script>
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-
-hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
-    hamburger.classList.toggle("open");
-});
-</script>
 
 </body>
 </html>
