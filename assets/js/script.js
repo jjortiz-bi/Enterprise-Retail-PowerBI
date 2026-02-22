@@ -4,7 +4,7 @@ const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
-// Scroll effect for header
+// Scroll effect
 window.addEventListener("scroll", () => {
     if (window.scrollY > 60) {
         header.classList.add("scrolled");
@@ -13,35 +13,36 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Toggle hamburger
+// Toggle menu
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     mobileMenu.classList.toggle("active");
 });
 
-// 🔥 PROPER MOBILE LINK HANDLING
+// Proper mobile link handling
 mobileLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
+    link.addEventListener("click", function(e) {
 
-        const targetId = this.getAttribute("href");
+        const target = this.getAttribute("href");
 
-        // Only handle internal links
-        if (targetId.startsWith("#")) {
-            e.preventDefault(); // Stop instant jump
+        // Only intercept internal links (#)
+        if (target.startsWith("#")) {
 
-            // Close menu first
+            e.preventDefault(); // stop instant jump
+
+            // Close menu immediately
             hamburger.classList.remove("open");
             mobileMenu.classList.remove("active");
 
             // Wait for animation to finish
             setTimeout(() => {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
+                const section = document.querySelector(target);
+                if (section) {
+                    section.scrollIntoView({
                         behavior: "smooth"
                     });
                 }
-            }, 300); // matches CSS transition
+            }, 350); // match CSS transition
         }
     });
 });
