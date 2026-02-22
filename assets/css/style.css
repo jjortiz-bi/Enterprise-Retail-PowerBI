@@ -25,8 +25,8 @@ header {
     top: 0;
     background: rgba(30, 58, 138, 1);
     z-index: 1000;
-    transition: all 0.35s ease;
-    overflow: hidden; /* 🔥 Important for smooth collapse */
+    transition: background 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
 }
 
 .nav-container {
@@ -34,19 +34,19 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 22px 0;
-    transition: all 0.35s ease;
+    transition: padding 0.35s ease;
 }
 
 .logo-img {
     height: 90px;
     filter: brightness(0) invert(1);
-    transition: all 0.35s ease;
+    transition: height 0.35s ease;
 }
 
 /* Scroll Glass Effect */
 
 header.scrolled {
-    background: rgba(30, 58, 138, 0.70);
+    background: rgba(30, 58, 138, 0.75);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -73,7 +73,7 @@ header.scrolled .logo-img {
     font-weight: 700;
     letter-spacing: 0.5px;
     position: relative;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .desktop-nav a::after {
@@ -119,12 +119,12 @@ header.scrolled .logo-img {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ================= MOBILE MENU (FIXED VERSION) ================= */
+/* ================= MOBILE MENU ================= */
 
 .mobile-menu {
     display: flex;
     flex-direction: column;
-    background: rgba(23, 37, 84, 0.95);
+    background: rgba(23, 37, 84, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     text-align: center;
@@ -132,28 +132,29 @@ header.scrolled .logo-img {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    pointer-events: none; /* 🔥 prevents ghost clicks */
+    pointer-events: none;
+
     transition: max-height 0.35s ease, opacity 0.25s ease;
 }
 
-/* Active State */
 .mobile-menu.active {
-    max-height: 500px; /* Enough space for links */
+    max-height: 500px;
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Links */
 .mobile-menu a {
     padding: 18px;
     color: white;
     text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     border-top: 1px solid rgba(255,255,255,0.08);
-    transition: background 0.3s ease;
+    transition: background 0.25s ease;
 }
 
 .mobile-menu a:hover {
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.08);
 }
 
 /* ================= HERO ================= */
@@ -178,7 +179,7 @@ header.scrolled .logo-img {
     color: #6B7280;
 }
 
-/* Buttons */
+/* ================= BUTTONS ================= */
 
 .cta-buttons {
     margin-top: 40px;
@@ -230,18 +231,21 @@ header.scrolled .logo-img {
     gap: 30px;
 }
 
+/* 4 Columns Desktop */
 @media (min-width: 1200px) {
     .project-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
+/* 2 Columns Tablet */
 @media (max-width: 1199px) and (min-width: 769px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* 1 Column Mobile */
 @media (max-width: 768px) {
     .project-grid {
         grid-template-columns: 1fr;
