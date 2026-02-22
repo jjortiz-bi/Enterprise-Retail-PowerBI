@@ -2,7 +2,7 @@
 const header = document.getElementById("header");
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
-const mobileLinks = mobileMenu.querySelectorAll("a");
+const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
 // Scroll Effect
 window.addEventListener("scroll", () => {
@@ -13,17 +13,22 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Hamburger Toggle
+// Toggle Hamburger
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     mobileMenu.classList.toggle("active");
 });
 
-// 🔥 Close Menu When Clicking a Link
+// ✅ Close Menu When Clicking Any Mobile Link
 mobileLinks.forEach(link => {
     link.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
         hamburger.classList.remove("open");
+        mobileMenu.classList.remove("active");
+
+        // Optional: prevent glitch by slight delay
+        setTimeout(() => {
+            mobileMenu.style.maxHeight = null;
+        }, 300);
     });
 });
 </script>
