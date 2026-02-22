@@ -22,10 +22,17 @@ section {
 header {
     position: sticky;
     top: 0;
-    background: #1E3A8A;
+    background: rgba(30, 58, 138, 1); /* Full solid */
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
+/* When Scrolled */
+header.scrolled {
+    background: rgba(30, 58, 138, 0.75); /* Translucent */
+    backdrop-filter: blur(10px);        /* Glass effect */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
 .nav-container {
     display: flex;
     justify-content: space-between;
