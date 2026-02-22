@@ -37,14 +37,6 @@ header {
     transition: padding 0.35s ease;
 }
 
-.nav-container::after {
-    content: "Senior Power BI Developer"; /* Change this to your exact title */
-    font-size: 16px;
-    color: #F5F7FA;
-    font-weight: 400;
-    margin-left: 20px;
-}
-
 .logo-img {
     height: 90px;
     filter: brightness(0) invert(1);
@@ -168,7 +160,7 @@ header.scrolled .logo-img {
 /* ================= HERO ================= */
 
 .hero {
-    padding: 120px 0 150px; /* Push down more space on mobile and desktop */
+    padding: 120px 0;
     text-align: center;
 }
 
@@ -179,100 +171,13 @@ header.scrolled .logo-img {
     color: #1E3A8A;
 }
 
-.hero p.hero-subtitle {
-    font-size: 18px;
+.hero p {
     margin-top: 20px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     color: #6B7280;
 }
-/* ================= ABOUT ================= */
-
-.about {
-    padding: 120px 0;
-    background: #ffffff;
-}
-
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.10);
-}
-
-.about-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #1E3A8A;
-}
-
-.about-intro {
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.skills-grid {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.skill-box {
-    background: #F3F4F6;
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.impact {
-    margin-top: 40px;
-}
-
-.impact h4 {
-    margin-bottom: 15px;
-    color: #1E3A8A;
-}
-
-.impact ul {
-    padding-left: 20px;
-}
-
-.impact li {
-    margin-bottom: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Responsive */
-
-@media (max-width: 992px) {
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 /* ================= BUTTONS ================= */
 
