@@ -4,7 +4,7 @@ const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
-// Scroll Effect
+// Scroll effect for header
 window.addEventListener("scroll", () => {
     if (window.scrollY > 60) {
         header.classList.add("scrolled");
@@ -13,22 +13,36 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Toggle Hamburger
+// Toggle hamburger
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     mobileMenu.classList.toggle("active");
 });
 
-// ✅ Close Menu When Clicking Any Mobile Link
+// 🔥 PROPER MOBILE LINK HANDLING
 mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        hamburger.classList.remove("open");
-        mobileMenu.classList.remove("active");
+    link.addEventListener("click", function (e) {
 
-        // Optional: prevent glitch by slight delay
-        setTimeout(() => {
-            mobileMenu.style.maxHeight = null;
-        }, 300);
+        const targetId = this.getAttribute("href");
+
+        // Only handle internal links
+        if (targetId.startsWith("#")) {
+            e.preventDefault(); // Stop instant jump
+
+            // Close menu first
+            hamburger.classList.remove("open");
+            mobileMenu.classList.remove("active");
+
+            // Wait for animation to finish
+            setTimeout(() => {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
+            }, 300); // matches CSS transition
+        }
     });
 });
 </script>
